@@ -54,3 +54,50 @@ h3 {
     bottom: 20px;
     left: 20px;
 }
+
+.form-content {
+    padding: 50px;
+    align-items: center;
+}
+
+input[type=text] {
+    border: 0px none;
+    padding: 10px;
+    margin: 5px;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    width: 100%;
+}
+
+input[type=submit] {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0px auto;
+    border-radius: 3px;
+    border: none;
+    background-color: #c4c4c4;
+    color: #fff;
+    width: 70%;
+    font-size: 1.3em;
+    font-family: dm-sans, sans-serif;
+    font-weight: 700;
+}
+
+.input-border {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#form-head {
+    margin:5px;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #c4c4c4;
+    opacity: 1; /* Firefox */
+    font-size: 1.3em;
+    font-family: dm-sans, sans-serif;
+    font-weight: 700;
+}
