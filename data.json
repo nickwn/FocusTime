@@ -1,0 +1,18 @@
+{
+    "sessions":[
+        {
+            "time": 45,
+            "title": "Event title",
+            "date": "7/22/2020 11:00:00 PM",
+            "reward": "Something",
+            "consequence": "Something"
+        },
+        {
+            "time": 95,
+            "title": "Event title",
+            "date": "8/22/2020 11:00:00 PM",
+            "reward": "Something",
+            "consequence": "Something"
+        }
+    ]
+}
