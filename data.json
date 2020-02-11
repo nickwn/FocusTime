@@ -2,17 +2,17 @@
     "sessions":[
         {
             "time": 45,
-            "title": "Event title",
-            "date": "7/22/2020 11:00:00 PM",
-            "reward": "Something",
-            "consequence": "Something"
+            "name": "Juggling Practice",
+            "date": "Thursday 22, 11:00 AM",
+            "reward": "Snack Break",
+            "consequence": "No Game Time"
         },
         {
             "time": 95,
-            "title": "Event title",
-            "date": "8/22/2020 11:00:00 PM",
-            "reward": "Something",
-            "consequence": "Something"
+            "name": "COGS 120 Homework",
+            "date": "Friday 23, 8:00 PM",
+            "reward": "Game Time",
+            "consequence": "20 Pushups"
         }
     ]
 }
