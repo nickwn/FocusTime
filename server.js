@@ -13,11 +13,13 @@ var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
 
-var index = require('./routes/index');
+var sessions = require('./routes/sessions');
 var event = require('./routes/event');
 
 // Create the server instance
 var app = express();
+
+app.get('/', function(request, response){ response.sendfile('welcome.html'); });
 
 // Print logs to the console and compress pages we send
 app.use(express.logger('dev'));
@@ -33,8 +35,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
-
-app.get('/', index.view);
+app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
 
 app.listen(app.get('port'), function() {
