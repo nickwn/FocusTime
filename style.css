@@ -16,6 +16,12 @@ a {
     text-decoration: none;
 }
 
+#time{
+    font-size:8em;
+    margin-bottom:-10px;
+    margin-top:-10px;
+}
+
 h2 {
     font-size: 2em;
     margin: 0px;
@@ -28,6 +34,10 @@ h3 {
 .header-pad {
     padding: 25px;
     background-color: #c4c4c4;
+}
+
+.event-details{
+    text-align:center;
 }
 
 .event-card {
@@ -86,6 +96,23 @@ input[type=submit] {
     background-image: none;
 }
 
+input[type=button] {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 0px auto;
+    border-radius: 3px;
+    border: none;
+    background-color: #c4c4c4;
+    color: #fff;
+    width: 70%;
+    font-size: 1.3em;
+    font-family: dm-sans, sans-serif;
+    font-weight: 700;
+    background-image: none;
+}
+
 .input-border {
     display: flex;
     justify-content: space-evenly;
@@ -101,4 +128,8 @@ input[type=submit] {
     font-size: 1.3em;
     font-family: dm-sans, sans-serif;
     font-weight: 700;
+}
+
+.started{
+    background-color:#ff6a6a;
 }
