@@ -40,12 +40,8 @@ app.set('view engine', 'handlebars');
 app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
-<<<<<<< HEAD
 app.get('/add',add.addEvent);
-app.get('finished', finished.view);
-=======
 app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
->>>>>>> 54c68e8a5e2f5ac5816e4b1dfcc6e995430afb95
 
 app.listen(app.get('port'), function() {
 	console.log("Node.js server running on port %s", app.get('port'));
