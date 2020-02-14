@@ -142,3 +142,20 @@ input[type=button] {
 .started{
     background-color:#ff6a6a;
 }
+
+#min-worked {
+    font-size: 4em;
+    margin:10px;
+}
+
+#min-needed {
+    font-size: 2em;
+}
+
+.succeed-time {
+    color: rgba(153, 198, 109, 1);
+}
+
+.fail-time {
+    color: rgba(247, 167, 0, 1);
+}
