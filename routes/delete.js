@@ -5,10 +5,12 @@ exports.deleteEvent = function(req, res){
     var index;
     var i = 0;
     while(i < array.length){
-        if(array[i] == req.query.name){
+        console.log(array[i].name + ':::' + req.query.name);
+        if(array[i].name === req.query.name){
             index = i;
         }
+        i++;
     }
-    delete data.sessions[i];
+    data.sessions.splice(index, index+1);
     res.render('sessions',data);
 }

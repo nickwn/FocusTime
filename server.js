@@ -41,11 +41,7 @@ app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);
-<<<<<<< HEAD
 app.get('/delete',delet.deleteEvent);
-app.get('finished', finished.view);
-=======
->>>>>>> 2d6c83bec8551f3834be88a2d6fdd00e2ab13ee1
 app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
 
 app.listen(app.get('port'), function() {
