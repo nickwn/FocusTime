@@ -3,14 +3,14 @@
         {
             "time": 45,
             "name": "Juggling Practice",
-            "date": "Thursday 22, 11:00 AM",
+            "date": "08/22/2020, 11:00 AM",
             "reward": "Snack Break",
             "consequence": "No Game Time"
         },
         {
             "time": 95,
             "name": "COGS 120 Homework",
-            "date": "Friday 23, 8:00 PM",
+            "date": "08/23/2020, 08:00 PM",
             "reward": "Game Time",
             "consequence": "20 Pushups"
         }
