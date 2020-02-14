@@ -15,6 +15,7 @@ var handlebars = require('express3-handlebars');
 
 var sessions = require('./routes/sessions');
 var event = require('./routes/event');
+var calendar = require('./routes/calendar');
 
 // Create the server instance
 var app = express();
@@ -35,6 +36,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', handlebars());
 app.set('view engine', 'handlebars');
 
+app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
 

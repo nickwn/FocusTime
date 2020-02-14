@@ -1,0 +1,54 @@
+ul {list-style-type: none;}
+
+/* Days (1-31) */
+.days {
+  padding: 10px 0;
+  margin: 0;
+}
+
+.days li {
+  list-style-type: none;
+  display: inline-block;
+  width: 13.6%;
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.calendar-head {
+    margin: 30px;
+}
+
+#return-link {
+    color: #888;
+}
+
+/* Highlight the "current" day */
+.days li.active {
+  color: #AAA;
+}
+
+.days li .day-events {
+    list-style: none;
+    margin-top: 3px;
+    text-align: center;
+    height: 20px;
+    overflow: hidden;
+}
+  
+.days li .day-events span {
+    vertical-align: top;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 7px;
+    height: 7px;
+    line-height: 5px;
+    margin: 0 1px;
+    border-radius: 10px;
+  }
+  
+.blue { background: rgba(156, 202, 235, 1); }
+.orange { background: rgba(247, 167, 0, 1); }
+.green { background: rgba(153, 198, 109, 1); }
+  
