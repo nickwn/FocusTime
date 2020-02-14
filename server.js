@@ -40,7 +40,7 @@ app.set('view engine', 'handlebars');
 app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
-app.get('finished', finished.view);
+app.get('/finished', finished.view);
 
 app.listen(app.get('port'), function() {
 	console.log("Node.js server running on port %s", app.get('port'));
