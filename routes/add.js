@@ -1,4 +1,5 @@
 var data = require('../data.json');
+const fs = require('fs');
 
 exports.addEvent = function(req, res){
     let obj = {
@@ -9,5 +10,9 @@ exports.addEvent = function(req, res){
         "consequence": req.query.consequence
     }
     data.sessions.push(obj);
+    fs.writeFile('../data.json',JSON.stringify(data),'utf8', function(err){
+        console.log('error writing to data.json... bruh');
+    })
+    
     res.render('sessions',data);
 }

@@ -25,6 +25,7 @@
           e.preventDefault();
           $('.header-pad').toggleClass('started');
           $('#start').hide();
+          $('#delet').hide();
           $('#end').attr("value","End Session");
           $('#end').attr("style","background-color:#ff6a6a");
 
@@ -33,7 +34,7 @@
 
       </br>
       <form action="/delete">
-        <input type="submit" value="Delete Event">
+        <input type="submit" id="delet" value="Delete Event">
         <input type="hidden" name="name" value='{{name}}'>
       </form>
       </br>
