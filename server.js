@@ -16,7 +16,6 @@ var handlebars = require('express3-handlebars');
 var sessions = require('./routes/sessions');
 var event = require('./routes/event');
 var calendar = require('./routes/calendar');
-var finished = require('./routes/finished');
 
 // Create the server instance
 var app = express();
@@ -40,7 +39,7 @@ app.set('view engine', 'handlebars');
 app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
-app.get('/finished', finished.view);
+app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
 
 app.listen(app.get('port'), function() {
 	console.log("Node.js server running on port %s", app.get('port'));
