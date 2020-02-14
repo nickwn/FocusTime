@@ -23,7 +23,6 @@
       <script>
         $('#start').click(function(e){
           e.preventDefault();
-          console.log('nice');
           $('.header-pad').toggleClass('started');
           $('#start').hide();
           $('#end').attr("value","End Session");
@@ -32,6 +31,11 @@
         })
       </script>
 
+      </br>
+      <form action="/delete">
+        <input type="submit" value="Delete Event">
+        <input type="hidden" name="name" value={{name}}>
+      </form>
       </br>
       <a href="/sessions">
         <input type="button" id="end" value="Return Home">
