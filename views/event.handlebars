@@ -2,15 +2,40 @@
 <html>
   <head>
     <title>Focus Time</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="../routes/event.js"></script>
   </head>  
   <body>
-    <h1>{{name}}</h1>
-    <h2>Focusing for {{session.time}} minutes</h2>
-    <h2>On {{session.date}}</h2>
-    <h2>{{session.reward}}</h2>
-    <h2>{{session.consequence}}</h2>
-    <a href="/"> Click here to go back!</a>
+    <div class="header-pad"></div>
+    <div class="event-details">
+      <h1 >{{name}}</h1>
+      <h1 id="time">{{session.time}}</h1>
+      <h2>minutes</h2>
+      </br>
+      <h3>{{session.date}}</h3>
+      <h3>{{session.reward}}</h3>
+      <h3>{{session.consequence}}</h3>
+      
+      </br>
+      <input type="button" id="start" value="Start Session">
+      <script>
+        $('#start').click(function(e){
+          e.preventDefault();
+          console.log('nice');
+          $('.header-pad').toggleClass('started');
+          $('#start').hide();
+          $('#end').attr("value","End Session");
+          $('#end').attr("style","background-color:#ff6a6a");
+
+        })
+      </script>
+
+      </br>
+      <a href="/">
+        <input type="button" id="end" value="Return Home">
+      </a>
+    </div>
   </body>
 </html>

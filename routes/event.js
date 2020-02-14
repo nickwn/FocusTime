@@ -15,3 +15,10 @@ function findEvent(name, array){
         }
     }
 }
+
+function startSession(e){
+    e.preventDefault();
+    console.log('clicked');
+    $('.header-pad').attr("color","#ff6464");
+
+}
