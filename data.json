@@ -3,7 +3,7 @@
         {
             "time": 45,
             "name": "Juggling Practice",
-            "date": "02/22/20, 11:00 AM",
+            "date": "02/22/20 11:00 AM",
             "dateString": "Thu Feb 22 2020 11:00:00 GMT-0800 (Pacific Standard Time)",
             "reward": "Snack Break",
             "consequence": "No Game Time",
@@ -12,7 +12,7 @@
         {
             "time": 95,
             "name": "COGS 120 Homework",
-            "date": "02/23/20, 8:00 PM",
+            "date": "02/23/20 8:00 PM",
             "dateString": "Thu Feb 23 2020 20:00:00 GMT-0800 (Pacific Standard Time)",
             "reward": "Game Time",
             "consequence": "20 Pushups",

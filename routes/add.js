@@ -2,10 +2,11 @@ var data = require('../data.json');
 const fs = require('fs');
 
 exports.addEvent = function(req, res){
+
     let obj = {
         "time": req.query.time,
         "name": req.query.name,
-        "date": req.query.StartDate + ", " + req.query.StartDateTime,
+        "date": req.query.StartDate + " " + req.query.StartDateTime,
         "reward": req.query.reward,
         "consequence": req.query.consequence
     }
