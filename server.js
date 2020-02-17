@@ -17,7 +17,7 @@ var sessions = require('./routes/sessions');
 var event = require('./routes/event');
 var add = require('./routes/add');
 var calendar = require('./routes/calendar');
-
+var delet = require('./routes/delete');
 // Create the server instance
 var app = express();
 
@@ -41,6 +41,7 @@ app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);
+app.get('/delete',delet.deleteEvent);
 app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
 
 app.listen(app.get('port'), function() {

@@ -72,28 +72,34 @@ h3 {
 
 input[type=text] {
     border: 0px none;
+    font-size:0.8em;
     padding: 10px;
     margin: 5px;
     box-sizing: border-box;
     background-color: #f0f0f0;
     width: 100%;
+    margin-bottom:20px;
 }
 
 input[type=number] {
     border: 0px none;
+    font-size:0.8em;
     padding: 10px;
     margin: 5px;
     box-sizing: border-box;
     background-color: #f0f0f0;
     width: 100%;
+    margin-bottom:20px;
 }
 
 input[type=submit] {
     text-align: center;
+    font-size:0.8em;
     display: flex;
     justify-content: center;
     padding: 5px;
     margin: 0px auto;
+    margin-bottom:20px;
     border-radius: 3px;
     border: none;
     background-color: #c4c4c4;
@@ -125,6 +131,7 @@ input[type=button] {
 .input-border {
     display: flex;
     justify-content: space-evenly;
+    width:104%;
 }
 
 #form-head {

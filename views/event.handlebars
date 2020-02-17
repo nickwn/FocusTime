@@ -23,15 +23,20 @@
       <script>
         $('#start').click(function(e){
           e.preventDefault();
-          console.log('nice');
           $('.header-pad').toggleClass('started');
           $('#start').hide();
+          $('#delet').hide();
           $('#end').attr("value","End Session");
           $('#end').attr("style","background-color:#ff6a6a");
 
         })
       </script>
 
+      </br>
+      <form action="/delete">
+        <input type="submit" id="delet" value="Delete Event">
+        <input type="hidden" name="name" value='{{name}}'>
+      </form>
       </br>
       <a href="/sessions">
         <input type="button" id="end" value="Return Home">
