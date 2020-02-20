@@ -3,7 +3,8 @@ var data = require('../data.json')
 exports.viewEvent = function(req,res){
     var info = {
         "name": req.params.name,
-        "session": findEvent(req.params.name, data.sessions)
+        "session": findEvent(req.params.name, data.sessions),
+        "time": req.params.time
     }
     res.render('event', info);
 }
