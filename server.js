@@ -27,9 +27,6 @@ var app = express();
 app.use(express.logger('dev'));
 app.use(express.compress());
 app.use(express.json());
-// Return all pages in the /static directory whenever they are requested at '/'
-// e.g., http://localhost:3000/index.html maps to /static/index.html on this machine
-app.use(express.static(__dirname + '/'));
 
 // Start the server
 app.set('port', process.env.PORT || 3000); // 80 for web, 3000 for development
@@ -45,6 +42,10 @@ app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);
 app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
 //app.get('/timer', timer.view);
+
+// Return all pages in the /static directory whenever they are requested at '/'
+// e.g., http://localhost:3000/index.html maps to /static/index.html on this machine
+app.use(express.static(__dirname + '/'));
 
 app.listen(app.get('port'), function() {
 	console.log("Node.js server running on port %s", app.get('port'));
