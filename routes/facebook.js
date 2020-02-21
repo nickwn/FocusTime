@@ -19,5 +19,6 @@ function checkLoginState() {
   }
 
 function changeUser(response){
-  window.location = "/sessions"
+  console.log(response['picture']['data']['url']);
+  $('#profpic').attr("src",response['picture']['data']['url']);
 }
