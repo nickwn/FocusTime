@@ -129,6 +129,15 @@ input[type=submit] {
     background-image: none;
 }
 
+#profpic{
+    widows: 40px;
+    height:40px;
+    margin-top:-20px;
+    margin-right:-10px;
+    border-radius:25px;
+    float:right;
+}
+
 input[type=button] {
     text-align: center;
     display: flex;
