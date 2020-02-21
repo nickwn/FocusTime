@@ -44,6 +44,7 @@ app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);
 app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
+//app.get('/timer', timer.view);
 
 app.listen(app.get('port'), function() {
 	console.log("Node.js server running on port %s", app.get('port'));
