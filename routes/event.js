@@ -4,7 +4,8 @@ exports.viewEvent = function(req,res){
     var info = {
         "name": req.params.name,
         "session": findEvent(req.params.name, data.sessions),
-        "time": req.params.time
+        "time": req.params.time,
+        "url": data.url
     }
     res.render('event', info);
 }

@@ -22,7 +22,6 @@ exports.addEvent = function(req, res){
             console.log(err);
         }
     })
-    console.log(JSON.stringify(data));
     
     res.render('sessions',data);
 }

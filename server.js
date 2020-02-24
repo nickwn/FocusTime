@@ -40,6 +40,7 @@ app.set('view engine', 'handlebars');
 app.get('/', welcome.view);
 app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
+app.get('/sessions/:id', sessions.view);
 app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);

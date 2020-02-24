@@ -7,12 +7,12 @@
   </head>
   <body>
     <div class="header-pad">
-      <img src="../media/prof.jpg" id="profpic"></img>
+      <img src={{url}} id="profpic"></img>
     </div>
     {{#each sessions}}
-    <a href="event/{{name}}">
+    <a href="/event/{{name}}">
         <div class="event-card">
-            <img src="media/chevron.png" alt="Go to timer">
+            <img src="/media/chevron.png" alt="Go to timer">
             <h2>{{time}} min</h2>
             <h3>{{name}}</h3>
             <h3>{{date}}</h3>
@@ -20,9 +20,9 @@
     </a>
     {{/each}}
     <div class="new-event-btn">
-        <a href="newevent.html"><img src="media/plus.png" alt="Create new event"></a>
+        <a href="/newevent.html"><img src="/media/plus.png" alt="Create new event"></a>
     </div><div class="calendar-btn">
-        <a href="calendar.html"><img src="media/cal.png" alt="Go to calendar"></a>
+        <a href="/calendar.html"><img src="/media/cal.png" alt="Go to calendar"></a>
     </div>
 
   </body>
