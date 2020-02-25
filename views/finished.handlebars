@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Focus Time</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/finished.js"></script>
+  </head>  
+  <body>
+    <div class="header-pad"></div>
+    <div class="event-details"><br><br>
+        {{#if success}}
+        <h1 id="head-txt">Great job!</h1>
+        <p id="p-txt" style="font-size: 1.5em;">Keep up the great work!</p><br><br><br>
+        {{else}}
+        <h1 id="head-txt">Oh no!</h1>
+        <p id="p-txt" style="font-size: 1.5em;">Better luck next time!</p><br><br><br>
+        {{/if}}
+        <a href="/sessions">
+            <input type="button" id="end" value="Return Home">
+        </a>
+    </div>
+  </body>
+</html>

@@ -19,6 +19,7 @@ var add = require('./routes/add');
 var calendar = require('./routes/calendar');
 var delet = require('./routes/delete');
 var welcome = require('./routes/welcome');
+var finished = require('./routes/finished');
 // Create the server instance
 var app = express();
 
@@ -41,7 +42,7 @@ app.get('/sessions/:id', sessions.view);
 app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);
-app.get('/finished', function(request, response){ response.sendfile('finished.html'); });
+app.get('/finished', finished.view);
 //app.get('/timer', timer.view);
 
 // Return all pages in the /static directory whenever they are requested at '/'
