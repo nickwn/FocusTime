@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Focus Time</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+  </head>
+  <body>
+    <div class="header-pad">
+      <img src={{url}} id="profpic"></img>
+    </div>
+    <div class="form-content">
+        <h2 id="form-head">Create Event</h2><br>
+        <form id="myform" action="/add">
+            <input type="text" name="name" id="name" placeholder="New Event Title" class="input-border">
+
+            <div class="input-border">
+                <input type="text" name="StartDate" placeholder="Start Date" id="datepicker">
+                <input type="text" name="StartDateTime" placeholder="Time" id="timepicker">
+            </div>
+            <input type="number" min="1" max="300" step="1" name="time" placeholder="Duration(minutes)">
+
+            <input type="text" name="reward" id="reward" placeholder="Reward for yourself" class="input-border">
+            <input type="text" name="consequence" id="consequence" placeholder="Consequence" class="input-border">
+            <br>
+            <input type="submit" id="save" value="Save Event">
+            <a href ="/sessions">
+              <input type="button" value="Delete Event">
+            </a>
+
+            <script>
+              $(function(){
+                $("#datepicker").datepicker();
+                $("#timepicker").timepicker();
+              });
+              $(function(){
+                $('#myform').validate({
+                  rules:{
+                    name: {
+                      required:true
+                    },
+                    time: {
+                      required:true
+                    },
+                    datepicker:{
+                      required:true
+                    },
+                    timepicker: {
+                      required:true
+                    },
+                    reward: {
+                      required:true
+                    },
+                    consequence: {
+                      required:true
+                    }
+                  }
+                });
+              });
+
+            </script>
+            <style>
+              .error{
+                font-size:10px;
+                color:#ff6a6a;
+                margin-left:10px;
+                margin-top:-15px;
+                display:block;
+              }
+            </style>
+        </form>
+    </div>
+
+  </body>
+</html>

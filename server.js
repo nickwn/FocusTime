@@ -18,6 +18,7 @@ var event = require('./routes/event');
 var add = require('./routes/add');
 var calendar = require('./routes/calendar');
 var delet = require('./routes/delete');
+var newe = require('./routes/new');
 var welcome = require('./routes/welcome');
 // Create the server instance
 var app = express();
@@ -37,6 +38,7 @@ app.set('view engine', 'handlebars');
 app.get('/', welcome.view);
 app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
+app.get('/new', newe.view);
 app.get('/sessions/:id', sessions.view);
 app.get('/event/:name', event.viewEvent);
 app.get('/add',add.addEvent);

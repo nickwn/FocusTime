@@ -19,8 +19,8 @@ function checkLoginState() {
   }
 
 function changeUser(response){
-  console.log(response);
-  var id = (response['id'])
-  $('#profpic').attr("src",response['picture']['data']['url']);
+  var id = (response['picture']['data']['url']);
+  id = id.substring(58);
+  $('#profpic').attr("src","https://platform-lookaside.fbsbx.com/platform/profilepic/?"+id);
   window.location = "/sessions/"+id;
 }
