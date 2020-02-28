@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="header-pad">
-      <img src={{url}} id="profpic"></img>
-    </div>
+    {{> header }}
     {{#each sessions}}
     <a href="/event/{{name}}">
         <div class="event-card">

@@ -7,9 +7,7 @@
     <script src="https://code.jquery.com/jquery.js"></script>
   </head>
   <body>
-    <div class="header-pad">
-      <img src={{url}} id="profpic"></img>
-      </div>
+    {{> header }}
     <div class="event-details">
       <h1 >{{name}}</h1>
       <h1 id="time">{{session.time}}</h1>
@@ -34,6 +32,7 @@
           $('#delet').hide();
           $('#end').attr("value","End Session");
           $('#end').attr("style","background-color:#ff6a6a");
+          $('#endlnk').attr('href', '/finished?name={{name}}&result=failed');
 
           var realTime = {{session.time}};
           var deadline = new Date();//gets current date and time
@@ -77,7 +76,7 @@
         <input type="hidden" name="name" value='{{name}}'>
       </form>
       </br>
-      <a id="endlnk" href="/finished?name={{name}}&result=failed">
+      <a id="endlnk" href="/sessions">
         <input type="button" id="end" value="Return Home">
       </a>
     </div>

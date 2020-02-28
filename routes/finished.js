@@ -15,6 +15,7 @@ exports.view = function(req, res){
 
     var succeeded = data.sessions[i].result === 'succeeded';
     var info = {
+        'url': data.url,
         'success': succeeded
     };
     res.render('finished', info);
