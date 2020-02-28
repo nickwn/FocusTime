@@ -47,6 +47,7 @@ app.get('/sessions', sessions.view);
 app.get('/new', newe.view);
 app.get('/sessions/:id', sessions.view);
 app.get('/event/:name', event.viewEvent);
+app.get('/event/alt/:name', event.viewEventAlt);
 app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);
 app.get('/finished', finished.view);

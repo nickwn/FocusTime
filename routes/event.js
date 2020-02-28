@@ -10,6 +10,16 @@ exports.viewEvent = function(req,res){
     res.render('event', info);
 }
 
+exports.viewEventAlt = function(req,res){
+    var info = {
+        "name": req.params.name,
+        "session": findEvent(req.params.name, data.sessions),
+        "time": req.params.time,
+        "url": data.url
+    }
+    res.render('event-alt', info);
+}
+
 function findEvent(name, array){
     for(var i = 0; i < array.length; i++){
         if(array[i].name === name){

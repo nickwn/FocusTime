@@ -2,12 +2,16 @@
 <html>
   <head>
     <title>Focus Time</title>
-    <link rel="stylesheet" type="text/css" href="../style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" data-role="none"></script>
+    <link rel="stylesheet" type="text/css" href="../../style.css">
   </head>
-  <body>
-    {{> header }}
+  <body >
+    <div class="header-pad">
+      <img src={{url}} id="profpic"></img>
+      </div>
     <div class="event-details">
       <h1 >{{name}}</h1>
       <h1 id="time">{{session.time}}</h1>
@@ -23,9 +27,17 @@
         <input type="submit" id="start" value="Start Session">
         <input type="hidden" name="time" value='{{time}}'>
       </form>-->
-      <input type="submit" id="start" value="Start Session">
+      <div id="input" value="Start Session"data-role="none">
+      <div id="handle" style="width:50px;height:50px;border-radius:25px;background-color:#f0f0f0;margin:auto;
+      margin-left:00px;z-index:4;transition:0.5s ease-in-out"></div></div>
       <script>
-        $('#start').click(function(e){
+        $("#handle").on("swiperight",function(e){
+          $(this).css({
+            transform: "translateX(250px)"
+          });
+          $('#input').css({backgroundColor:"#ff6d6d"});
+        });
+        $("#handle").on("swiperight",function(e){
           e.preventDefault();
           $("#return").hide();
           $("#endlnk").show();
@@ -34,7 +46,6 @@
           $('#delet').hide();
           $('#end').attr("value","End Session");
           $('#end').attr("style","background-color:#ff6a6a");
-          $('#endlnk').attr('href', '/finished?name={{name}}&result=failed');
 
           var realTime = {{session.time}};
           var deadline = new Date();//gets current date and time
@@ -64,7 +75,7 @@
         	    }
         	}, 1000);
 
-        })
+        });
       </script>
 
 <!--
@@ -74,19 +85,15 @@
 
       </br>
       <form action="/delete">
-        <input type="submit" id="delet" value="Delete Event">
-        <input type="hidden" name="name" value='{{name}}'>
+        <input type="submit" id="delet" value="Delete Event"data-role="none">
+        <input type="hidden" name="name" value='{{name}}'data-role="none">
       </form>
       </br>
-<<<<<<< HEAD
-      <a id="endlnk" href="/sessions">
-=======
       <a id="return" href="/sessions">
-        <input type="button" value="Return Home">
+        <input type="button" value="Return Home"data-role="none">
       </a>
       <a id="endlnk" href="/finished?name={{name}}&result=failed">
->>>>>>> 71aa6c24ad0ae4ca37b6e211e59ec0c7ec11cd00
-        <input type="button" id="end" value="Return Home">
+        <input type="button" id="end" value="Return Home"data-role="none">
       </a>
       <script>
         $("#endlnk").hide();
