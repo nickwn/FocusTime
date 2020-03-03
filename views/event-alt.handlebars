@@ -3,7 +3,6 @@
   <head>
     <title>Focus Time</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <script src="https://code.jquery.com/jquery-1.12.4.js" ></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js" data-role="none"></script>
     <link rel="stylesheet" type="text/css" href="../style.css">
@@ -39,7 +38,6 @@
           $('#input').css({backgroundColor:"#ff6d6d"});
         });
         $("#handle").on("swiperight",function(e){
-          e.preventDefault();
           $("#return").hide();
           $("#endlnk").show();
           $('.header-pad').toggleClass('started');
@@ -86,15 +84,15 @@
      </form>-->
 
       </br>
-      <form action="/delete">
+      <form data-ajax="false" action="/delete">
         <input type="submit" id="delet" value="Delete Event">
         <input type="hidden" name="name" value='{{name}}'>
       </form>
       </br>
-      <a id="return" href="/sessions">
+      <a id="return" rel="external" href="/sessions">
         <input type="button" value="Return Home">
       </a>
-      <a id="endlnk" href="/finished?name={{name}}&result=failed">
+      <a id="endlnk" rel="external" href="/finished?name={{name}}&result=failed">
         <input type="button" id="end" value="Return Home">
       </a>
       <script>

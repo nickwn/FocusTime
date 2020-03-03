@@ -204,3 +204,7 @@ input[type=button] {
 }
 
 .ui-loader{opacity:0}
+
+.ui-btn{
+    margin-top:-40px;
+}
