@@ -35,11 +35,40 @@ function drawDays(data) {
         addEvents(monthItr, data, events);
         padDay.appendChild(events);
 
+        let monthItrLocal = monthItr;
+        padDay.onclick = function() {
+            console.log('onclick');
+            var eventName = eventNameForDate(monthItrLocal, data);
+            console.log(eventName);
+            if(eventName != '#') {
+                window.location.href = '/event/' + eventName;
+            }
+        };
+
         days.appendChild(padDay);
         monthItr = new Date(monthItr.getFullYear(), monthItr.getMonth(), monthItr.getDate() + 1);
     }
 
     el.appendChild(days);
+}
+
+function eventNameForDate(date, events) {
+    var todaysEvents = events.sessions.reduce(function(memo, ev) {
+        eventDate = new Date(ev.dateString);
+        if(areSameDates(eventDate, date)) {
+            memo.push(ev);
+        }
+        return memo;
+    }, []);
+
+    console.log(date);
+
+    if(todaysEvents.length > 0) {
+        return todaysEvents[0].name;
+    }
+    else {
+        return '#';
+    }
 }
 
 function addEvents(date, events, element) {

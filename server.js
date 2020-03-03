@@ -12,6 +12,7 @@ var express = require('express');
 var http = require('http');
 var path = require('path');
 var handlebars = require('express3-handlebars');
+const fs = require('fs');
 
 var sessions = require('./routes/sessions');
 var event = require('./routes/event');
@@ -33,8 +34,12 @@ app.use(express.json());
 // Start the server
 app.set('port', process.env.PORT || 3000); // 80 for web, 3000 for development
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars());
+app.engine('handlebars', handlebars({ 
+	partialsDir: __dirname + '/views/partials/'
+  }));
 app.set('view engine', 'handlebars');
+
+//handlebars.registerPartial('header', fs.readFileSync(__dirname + '/views/header.handlebars', 'utf8'));
 
 app.get('/', welcome.view);
 app.get('/calendar', calendar.view);

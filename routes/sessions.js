@@ -6,7 +6,7 @@ exports.view = function(req, res){
     if(id != undefined && id != 'default'){
         data['url'] = 
         "https://platform-lookaside.fbsbx.com/platform/profilepic/?"+id;
-        fs.writeFile('../data.json', JSON.stringify(data), function(e){
+        fs.writeFile('data.json', JSON.stringify(data), function(e){
             if(e){throw e;}
         });    
     } else if (id== 'default'){

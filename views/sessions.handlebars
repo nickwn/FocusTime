@@ -6,15 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="header-pad">
-      <img src={{url}} id="profpic"></img>
-    </div>
+    {{> header }}
     {{#each sessions}}
     <a href="/event/{{name}}">
         <div class="event-card">
             <img src="/media/chevron.png" alt="Go to timer">
-            <h2>{{time}} min</h2>
-            <h3>{{name}}</h3>
+            <h2>{{name}}</h2>
+            <h3>{{time}} min</h3>
             <h3>{{date}}</h3>
         </div>
     </a>
