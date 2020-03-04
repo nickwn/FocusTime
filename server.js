@@ -34,7 +34,7 @@ app.use(express.json());
 // Start the server
 app.set('port', process.env.PORT || 3000); // 80 for web, 3000 for development
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', handlebars({ 
+app.engine('handlebars', handlebars({
 	partialsDir: __dirname + '/views/partials/'
   }));
 app.set('view engine', 'handlebars');
@@ -46,6 +46,7 @@ app.get('/calendar', calendar.view);
 app.get('/sessions', sessions.view);
 app.get('/new', newe.view);
 app.get('/sessions/:id', sessions.view);
+app.get('/sessions-alt/:id', sessions.viewAlt);
 app.get('/event/:name', event.viewEvent);
 app.get('/event-alt/:name', event.viewEventAlt);
 app.get('/add',add.addEvent);
