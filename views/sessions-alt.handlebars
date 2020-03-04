@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script src="https://kit.fontawesome.com/522d0f159e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
 
     <!-- Google Analytics -->
     <script>
@@ -34,7 +35,13 @@
     <div class="new-event-btn">
         <a href="/new"><img src="/media/plus.png" alt="Create new event"></a>
     </div><div class="calendar-btn">
-        <a href="/calendar.html"><img src="/media/cal.png" alt="Go to calendar"></a>
+        <a href="/calendar-alt.html"><img src="/media/cal.png" alt="Go to calendar"></a>
     </div>
+
+    <script>
+      $('.calendar-btn').click(function(){
+        ga('send', 'event', 'button',' click');
+      })
+    </script>
 
   </body>
