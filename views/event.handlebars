@@ -28,6 +28,7 @@
         $('#start').click(function(e){
           e.preventDefault();
           $("#return").hide();
+          $('#edit').hide();
           $("#endlnk").show();
           $('.header-pad').toggleClass('started');
           $('#start').hide();
@@ -78,6 +79,9 @@
         <input type="hidden" name="name" value='{{name}}'>
       </form>
       </br>
+      <a id="edit" href="/editevent?name={{name}}">
+        <input type="button" value="Edit Event">
+      </a>
       <a id="return" href="/sessions">
         <input type="button" value="Return Home">
       </a>

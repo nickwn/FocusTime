@@ -22,6 +22,7 @@ var delet = require('./routes/delete');
 var newe = require('./routes/new');
 var welcome = require('./routes/welcome');
 var finished = require('./routes/finished');
+var edit = require('./routes/edit');
 // Create the server instance
 var app = express();
 
@@ -51,6 +52,8 @@ app.get('/event/alt/:name', event.viewEventAlt);
 app.get('/add',add.addEvent);
 app.get('/delete',delet.deleteEvent);
 app.get('/finished', finished.view);
+app.get('/edit', edit.editEvent);
+app.get('/editevent', edit.view);
 //app.get('/timer', timer.view);
 
 // Return all pages in the /static directory whenever they are requested at '/'
