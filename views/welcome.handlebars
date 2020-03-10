@@ -44,15 +44,21 @@
   <body>
     <div class="header-pad"></div>
     <div class="form-content">
-      <center><h2 id="form-head">Welcome to</h2></center>
-      <center><h2 id="form-head">Focus Time</h2><br></center>
-        <br>
+      <div class="logo" style="width:100%;text-align:center;">
+        <img style="width:120px;height:120px"src="../media/logo.svg"><img>
+      </div>
+      <center><h2 style="font-size:3em"id="form-head">Focus Time</h2><br></center>
         <br>
         <br>
         <br>
         <fb:login-button id="input" size="large" scope="public_profile,email" onlogin="checkLoginState();">
           Login with Facebook
 				</fb:login-button>
+        <style>
+          #input span{
+            margin-top:12px;
+          }
+        </style>
         <form action="/sessions/default">
         <input type="submit" value="Continue as Guest">
         <br>

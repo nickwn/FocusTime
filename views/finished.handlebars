@@ -32,9 +32,20 @@
         <div class="likeCtr">Click like button if I enjoyed the interaction <button class="btn btn-default likeBtn">Like</button></div>
         <br>
         <br>
-        <a href="/sessions">
-            <input type="button" id="end" value="Return Home">
-        </a>
+        <form action="/add">
+          <input type="submit" id="add" value="Reschedule For Next Week">
+          <input type="hidden" name="name" value='{{name}} 2'>
+          <input type="hidden" name="StartDate" value='{{startDate}}'>
+          <input type="hidden" name="StartDateTime" value='{{startTime}}'>
+          <input type="hidden" name="time" value='{{session.time}}'>
+          <input type="hidden" name="reward" value='{{session.reward}}'>
+          <input type="hidden" name="consequence" value='{{session.consequence}}'>
+          <input type="hidden" name="result" value="upcoming">
+        </form>
+        <form action="/delete">
+          <input type="submit" id="delet" value="Delete This Event">
+          <input type="hidden" name="name" value='{{name}}'>
+        </form>
     </div>
   </body>
 </html>
