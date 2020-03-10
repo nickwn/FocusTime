@@ -22,7 +22,7 @@
   <body>
     {{> header }}
     <div class="event-details">
-      <h1 >{{name}}</h1>
+      <h1>{{name}}</h1>
       <h1 id="time">{{session.time}}</h1>
       <h2>minutes</h2>
       </br>
@@ -31,12 +31,11 @@
       <h3>{{session.consequence}}</h3>
       <h1 id="completed"></h1>
 
-      </br>
       <!--<form action="/timer">
         <input type="submit" id="start" value="Start Session">
         <input type="hidden" name="time" value='{{time}}'>
       </form>-->
-      <input type="submit" id="start" value="Start Session">
+      <input type="button" id="start" value="Start Session">
       <script>
         $('#start').click(function(e){
           e.preventDefault();
@@ -85,17 +84,15 @@
       <form action="/timer">
        <input type="hidden" name="time" value='{{time}}'>
      </form>-->
-
-      </br>
-
+     <br>
       <form action="/delete">
         <input type="submit" id="delet" value="Delete Event">
         <input type="hidden" name="name" value='{{name}}'>
       </form>
-      </br>
       <a id="edit" href="/editevent?name={{name}}">
         <input type="button" value="Edit Event">
       </a>
+      <br>
       <a id="return" href="/sessions">
         <input type="button" value="Return Home">
       </a>
